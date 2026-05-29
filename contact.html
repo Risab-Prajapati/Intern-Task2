@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: linear-gradient(60deg, black, rgb(7, 7, 164));
+        color: white;
+      }
+
+      nav {
+        height: 60px;
+        background-color: hsla(240, 88%, 25%, 0.911);
+        box-shadow: 5px 5px 4px rgb(4, 6, 45);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 80px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-weight: 600;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.3rem;
+      }
+
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .form input,
+      textarea {
+        width: 400px;
+        padding: 15px;
+        outline: none;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .form h1 {
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+
+      .form button {
+        margin-top: 20px;
+        padding: 9px 17px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        background-color: rgb(13, 184, 218);
+        border: 1.5px solid black;
+        border-radius: 6px;
+      }
+
+      .form button:active {
+        background-color: rgb(118, 207, 224);
+      }
+
+      .footer {
+        height: 65px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .footer-links a {
+        text-decoration: none;
+        color: red;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 600px) {
+        nav {
+          position: relative;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background-color: hsla(240, 88%, 25%, 0.95);
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 100%;
+          text-align: center;
+          padding: 20px 0;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .form input,
+        textarea {
+          max-width: 90%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      @media screen and (max-width: 345px) {
+        nav {
+          position: relative;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          background-color: hsla(240, 88%, 25%, 0.95);
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 100%;
+          text-align: center;
+          padding: 20px 0;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .form input,
+        .form textarea {
+          max-width: 335px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">MainCrafts</div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="form">
+      <h1>Contact Us</h1>
+      <form action="">
+        <input type="text" placeholder="Name" /><br /><br />
+        <input type="text" placeholder="Email" /><br /><br />
+        <textarea placeholder="Message"></textarea>
+      </form>
+      <button>Submit</button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>Copyright &copy 2025 Maincrafts All Rights Reserved.</p>
+
+        <div class="footer-links">
+          <a href="">Privacy Policy</a>
+          <span>|</span>
+          <a href="">Terms</a>
+          <span>|</span>
+          <a href="">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
