@@ -10,8 +10,8 @@ menuToggle.addEventListener("click", () => {
 });
 
 function validateForm() {
-  let name = document.form["contactForm"]["name"].value;
-  let email = document.form[contactForm]["email"];
+  let name = document.forms["contactForm"]["name"].value;
+  let email = document.forms[contactForm]["email"];
 
   if (name == "" || email == "") {
     alert("Name and Email must be filled");

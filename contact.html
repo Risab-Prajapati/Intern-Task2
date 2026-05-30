@@ -203,12 +203,12 @@
 
     <div class="form">
       <h1>Contact Us</h1>
-      <form name="contactForm" onsubmit="return validateForm();">
-        <input type="text" placeholder="Name" /><br /><br />
-        <input type="text" placeholder="Email" /><br /><br />
-        <textarea placeholder="Message"></textarea>
+      <form name="contactForm">
+        <input type="text" name="name" placeholder="Name" /><br /><br />
+        <input type="text" name="email" placeholder="Email" /><br /><br />
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="button" onclick="validateForm()">Submit</button>
       </form>
-      <button>Submit</button>
     </div>
 
     <footer class="footer">
